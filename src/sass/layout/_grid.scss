@@ -1,0 +1,73 @@
+.grid{
+    margin: 40px 0 ;
+}
+.row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include respond(tab-land){
+        
+    }
+    
+}
+
+.col40 {
+    width: 38%;
+    @include respond(tab-land){
+        width: 45%;
+    }
+    @include respond(phone){
+        width: 100%; 
+        margin-bottom: 8rem;
+    }
+}
+.col40e {
+    width: 40%;
+    @include respond(phone){
+        width: 100%;
+    }
+}
+.col46 {
+    width: 46%;
+}
+.col60 {
+    width: 58%;
+    @include respond(tab-land){
+        width: 100%; 
+       
+    }
+}
+.col60e {
+    width: 60%;
+    @include respond(phone){
+        width: 100%;
+    }
+}
+.col50 {
+    width: 50%;
+    &:not(.history_cont_sec) {
+        @include respond(tab-land){
+            width: 100%; 
+           
+        }
+    }
+    
+    @include respond(phone){
+        width: 100%; 
+        margin-bottom: 8rem;
+    }
+}
+.col1of3 {
+    width: 32%; 
+    @include respond(tab-land){
+        width: 100%; 
+    }
+}
+.col2of3 {
+    width: 65%; 
+    @include respond(tab-land){
+        width: 100%; 
+    }
+}

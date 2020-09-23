@@ -1,0 +1,292 @@
+
+.btn{
+    &,
+    &:link,
+    &:visited{
+        text-transform: uppercase;
+        transition: all .3s ease;
+        border: none;
+        cursor: pointer;
+        padding: 1.5rem 3rem 1.5rem 6rem;
+        color: $mainColor;
+        font-size: 15px;
+        font-weight: 500!important;
+        display: flex;
+        align-items: center;
+        min-width: 24rem;
+
+        &  > span {
+            width: 2rem;
+            background-color:$mainColor;
+            height: 1px;
+            display: block;
+            transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+            margin-left: .5rem;
+        }
+        
+        &:hover {
+            & > span {
+                width: 4rem;
+            }
+           
+        }
+
+        
+
+        @include respond(tab-land){
+            padding: 1.8rem 3rem;
+            font-size: 15px;
+        }
+
+        &.borderd {
+            border: 1px solid #3A94E1;
+            color: black;
+            @include respond(tab-land){
+                padding: 1.5rem 7rem;
+            }
+            @include respond(phone){
+                padding: 1.5rem 3rem;
+            }
+            
+        }
+    
+    }
+
+    &.customBack {
+        padding: 2rem 4rem;
+        color: white!important;
+        font-size: 12px;
+        @include respond(tab-land){
+            height: 46px;
+        }
+       @include displayFlex;
+        justify-content: center;
+        i {
+            color: white;
+            margin: 0 4px;
+        }
+
+        img {
+            margin: 0px 6px;
+            margin-top: 4px;
+            margin-right: 0;
+        }
+    }
+
+}
+
+
+.btn_text{
+    
+    align-items: center;
+    &:link,
+    &:visited{
+        display: flex;
+        font-size: 19px;
+        transition: all .2s;
+        position: relative;
+        font-weight: 600;
+        
+    }
+
+    img {
+        width: 2rem;
+        margin-left: 1rem;
+        display: block;
+        min-width: 2.5rem;
+    }
+  
+}
+
+.btn__text {
+    &  > span {
+        position: relative;
+        z-index: 11;
+        display: block;
+        transition: all 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    }
+    
+    &:hover {
+        & > span {
+            transform: translateX(1.2rem);
+        }
+       
+    }
+  
+}
+
+// .btn.main_btn {
+//     background: rgba(0,0,0,0.9);
+//     padding: 2rem 8rem;
+//     font-size: 16px;
+//     color: white;
+//     border: 1px solid #fff;
+//     border-radius: 20px;
+// }
+
+
+.main_btn_white {
+    width: 270px;
+    height: 80px;
+    margin-top: 4rem;
+    margin-left: 18rem;
+    position: relative;
+    z-index: 999;
+    @include respond(phone){
+        width: 200px;
+        height: 80px;
+        margin-left: 0rem;
+        margin-top: 5rem;
+    }
+    a {
+        &,
+        &:link,
+        &:visited{
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-transform: uppercase;
+            transition: all .3s ease;
+            border:none;
+            cursor: pointer;
+            padding: 1rem 2rem;
+            color: #0B63AC;
+            background: #FFFFFF;
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            font-weight: 800;
+            padding: 2rem 4rem;
+            @include respond(phone){
+                padding: 2rem 2rem;
+                font-size: 10px;
+            }
+
+            
+
+            img {
+                margin-left: 5rem;
+                width: 7px;
+                transition: all .8s ease ;
+                transform: translateX(0) rotate(0);
+            }
+    
+        }
+    } 
+
+    span {
+        width: 24%;
+        height: 1px;
+        background: #1368AF;
+        position: absolute;
+        bottom: 29%;
+        left: 4rem;
+        overflow: visible!important;
+        
+
+        &:before,&:after{
+            content: "";
+            position: absolute;
+            bottom: 50%;
+            border-radius: 100rem;
+            background: white;
+            border: 1px solid #1368AF;
+           
+        }
+
+        &:before {
+            left: -7px;
+            width: 1rem;
+            height: 1rem;
+            display: block;
+            transform: translate(-1px, 4px);
+            
+        }
+        &:after {
+            right: -4px; 
+            width: .5rem;
+            height: .5rem;
+            transform: translate(0px, 2px);
+            
+        }
+    }
+
+    &:hover {
+        img {
+            transform: translateX(10px) rotate(0);
+            
+        }
+    }
+}
+
+// [dir="rtl"] {
+//     .main_btn_white img {
+//         transform: translateX(0) rotate(-180deg)!important;
+//     }
+//     .main_btn_white:hover img {
+//         transform: translateX(10px) rotate(-180deg)!important;
+//     }
+    
+// } 
+
+.list_pagination {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 4.5rem;
+    margin-bottom: 6.5rem;
+    &_cont {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width :280px;
+        max-width: 30%;
+        
+        @include respond(phone) {
+            min-width :100%;
+            max-width: 100%;
+           
+        }
+        span {
+            font-size: 16px;
+            color: white;
+            font-weight: 100;
+            @include respond(phone) {
+               display: none;
+            }
+        }
+        .arrows {
+            display: flex;
+            align-items: center;
+            margin-left: 2rem;
+            @include respond(phone) {
+                width: 100%;
+                justify-content: space-between;
+                margin-left: 0;
+            }
+            a {
+                display: block;
+                &:first-of-type {
+                    margin-right: 3.5rem;
+                }
+                img {
+                    width: 9px;
+                }
+            }
+        }
+    }
+}
+
+.main_btn_white.submitForm img{
+    transition: all .8s ease;  
+}
+
+.like {
+    i {
+        cursor: pointer;
+        &.full{
+            font-weight: 600;
+        }
+    }
+}

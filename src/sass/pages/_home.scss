@@ -1,0 +1,677 @@
+.history {
+    margin: 10rem 16rem 2rem;
+    padding-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &:not(.joinTeam) {
+        @include respond(tab-land){
+            margin: 17rem 2rem 15rem;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-bottom: 8rem;
+        }
+        @include respond(phone) {
+            margin: 10rem 2rem 6rem;
+        }
+    }
+    
+    &  >div {
+        width: 50%;
+        @include respond(tab-land){
+            width: 74%;
+        }
+        @include respond(phone){
+            width: 100%;
+        }
+    }
+    &_img {
+        max-height: 430px;
+        clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+    }
+    .history_text_cont {
+        margin-left: -22rem;
+        min-height: 320px;
+        max-height: 320px;
+        flex: 1;
+        @include respond(tab-land){
+            margin-left: auto;
+            width: 51%;
+            flex: 0 0 80%;
+            margin-top: -12rem;
+            max-height: unset;
+        }
+        @include respond(phone){
+            flex: 0 0 85%;
+        }
+    }
+    
+    &_text {
+        background-color: white;
+        clip-path: polygon(14% 0, 100% 0, 100% 100%, 0% 100%);
+        padding: 6rem 10rem 6rem 18rem;
+        @include respond(tab-land){
+            padding: 8rem 8rem 8rem 14rem;
+        }
+        @include respond(phone){
+            padding: 6rem 2rem 8rem 8rem;
+        }
+
+        p {
+            line-height: 2;
+        }
+    }
+
+    .btn{
+        position: absolute;
+        bottom: -25px;
+        right: -20px;
+        @include respond(tab-land){
+            bottom: 0px;
+        }
+    }
+}
+
+.fabCons_sec{
+    display: flex;
+    min-height: 560px;
+    margin: 9rem 0;
+    @include respond(tab-land){
+        flex-wrap: wrap;
+    }
+    @include respond(phone){
+        margin: 7rem 0;
+    }
+    &> .fabCons {
+        width: 50%;
+        @include respond(tab-land){
+            width: 100%;
+            min-height: 500px;
+        }
+    }
+    .fabCons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-align: center;
+        padding: 0 12rem;  
+        padding-top: 16rem;
+        position: relative;
+        z-index: 1;
+
+         > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+         }
+        
+        
+        a.overlay {
+            position: absolute;
+            top: 0;
+            left: 5%;
+            width: 85%;
+            height: 100%;
+            background-color: rgba(0,0,0,.5);
+            clip-path: polygon(15% 0, 75% 0, 95% 100%, 34% 100%);
+            z-index: -1;
+            visibility: hidden;
+            opacity: 0;
+            transition: all .3s ease;
+
+        }
+
+        h2 {
+            color: white;
+            font-weight: 900;
+            font-size: 40px;
+        }
+        p {
+            color: white; 
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.6;;
+            width: 75%;
+            min-width: 250px;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            color: white;
+            margin-top: 14rem;
+            visibility: hidden;
+            opacity: 0;
+            transition: all .3s ease;
+
+            span {
+                background-color: white;
+
+            }
+        }
+
+        &.fab {
+            background-image: url("../img/home/fabrication.jpg");
+            background-image: linear-gradient(to right,  rgba(0,0,0,.6) 20%,
+            rgba(0,0,0,.6)), url("../img/home/fabrication.jpg");
+            border-right: 1px solid #686D72;
+        }
+        &.cons {
+            background-image: url("../img/home/fabrication.jpg");
+            background-image: linear-gradient(to right,  rgba(0,0,0,.6) 20%,
+            rgba(0,0,0,.6)), url("../img/home/construction.jpg");
+        }
+
+        &:hover {
+            a.overlay , & .btn {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+
+.ourProjects {
+    width: 85%;
+    background-image: url(../img/home/grayShape.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    margin-bottom: 26rem;
+    padding: 4rem 0 0 13rem;
+    background-position-x: right;
+    @include respond(tab-land){
+        width: 97%;
+        padding: 4rem 0 0 2rem;
+        background-position-x: right;
+        margin-bottom: 34rem;
+    }
+    @include respond(phone){
+        background-position-x: 83%;
+        width: 100%;
+        height: auto;
+        margin-bottom: 29rem;
+    } 
+    &_heading {
+        font-size: 63px;
+        color: rgba(0,0,0,.1);
+        margin-bottom: 3rem;
+        font-weight: 900;
+        @include respond(phone){
+            font-size: 52px;
+            line-height: 1;
+        }
+    }
+    .ourProjects_main {
+        @include respond(tab-land){
+            margin-left: -2rem;
+        } 
+        @include respond(phone){
+            margin-left: 0rem;
+        } 
+    }
+    .project {
+        display: flex;
+        height: 600px;
+        @include respond(phone){
+            flex-direction: column-reverse;
+            height: auto;
+            
+        } 
+        .project_img {
+            width: 50%;
+            margin-right: 5%;
+            @include respond(phone){
+                width: 100%;
+                margin-right: 0%;
+                margin-top: -5rem;
+            } 
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+      
+        .project_text {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            @include respond(phone){
+                width: 100%;
+            }
+
+            h2 {
+                text-transform: capitalize;
+                margin-top: 3px;
+                @include respond(phone){
+                    line-height: 1;
+                }
+            }
+
+            h4 {
+                color: $mainColor;
+                font-weight: bold;
+                font-size: 18px;
+                margin-bottom: 2.5rem;
+            }
+
+            p {
+                color: #5B5B5B;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 1.6;
+                margin-bottom: 3rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+            }
+
+            a {
+                padding-left: 0;;
+                margin-bottom: 3rem;
+
+                @include respond(phone) {
+                    margin-bottom: 12rem;
+                }
+            }
+
+            .total {
+                background-color: $mainColor;
+                padding: 3rem 4rem;
+                display: flex;
+                flex-direction: column;
+                color: #FFFFFF;
+                max-width: 340px;
+                min-width: 290px;
+                width: 99%;
+                margin-left: -8rem;
+                min-height: 100px;
+                clip-path: polygon(0 0, 86% 0, 100% 100%, 0% 100%);
+                @include respond(phone){
+                    margin-left: 0rem;
+                    margin-top: -10rem;
+                } 
+                span {
+                    font-size: 13px;
+                    font-weight: 400;   
+                }
+
+                h3 {
+                    font-size: 35px;
+                    font-weight: 900;   
+                }
+            }
+        }
+
+    
+        
+    }
+    .main_slider {
+        position: relative;
+
+        & > .btn {
+            position: absolute;
+            bottom: -4rem;
+            right: -6rem;
+            padding: 0;
+            @include respond(tab-land){
+                right: 0;
+                bottom: -8rem;
+            } 
+            @include respond(phone){
+                bottom: -19rem;
+            } 
+        }
+        .main_slider_footer {
+            position: absolute;
+            bottom: 0rem;
+            max-width: 26rem;
+            z-index: 999;
+            .main__footer_toggler {
+                @include respond(tab-land){
+                    margin-left: 0rem;  
+                } 
+            }
+           
+            @include respond(phone){
+                bottom: -7rem;
+                left: -2rem;
+                bottom: -16rem;
+            } 
+        }
+    }
+}
+
+
+
+// join team
+.joinTeam {
+    background: #EBF0F8;
+    margin: 0;
+    padding: 10rem 16rem 8rem;
+    @include respond(tab-land){
+        padding: 0rem 0rem 8rem 2rem;
+    } 
+    @include respond(phone){
+        flex-direction: column;
+        padding: 0rem 0rem -2rem 2rem;
+        
+    } 
+
+    .joinTeam_cont {
+       
+        margin-right: -20%;
+        position: relative;
+        z-index: 2;
+        width: 63%;
+        @include respond(phone){
+            width: 100%;
+            margin-right: 0%;
+        } 
+       
+    }
+    .joinTeam_text {
+        padding: 5rem 10rem 3rem 5rem;
+        background: white;
+        margin-top: 5rem;
+        clip-path: polygon(0 0%, 87% 0%, 100% 100%, 0% 100%);
+        @include respond(phone){
+            margin-bottom: 3rem;
+            padding: 5rem 4rem;
+        } 
+    }
+    .btn {
+        position: static;
+        padding-left: 0;
+        margin-top: 2rem;
+        width: auto;
+        @include respond(phone){
+            margin: 2rem 0;
+        } 
+    }
+
+    p.main_p {
+        width: 75%; 
+        @include respond(phone){
+            width: 95%;
+        } 
+    }
+
+    .history_img {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
+        @include respond(tab-land){
+            min-height: 430px;
+            align-self: stretch;
+        } 
+        @include respond(phone){
+            min-height: 350px;
+        } 
+    }
+}
+
+
+// latest News
+
+.latestNews {
+    display: flex;
+    justify-content: space-between;
+    background-color:#EDEDED ;
+    padding: 8rem 5rem 8rem 15rem;
+    @include respond(tab-land) {
+        padding: 12rem 2rem 15rem 2rem;
+        flex-direction: column;
+    }
+
+    .btn {
+        padding: 1.5rem 0rem;
+    }
+    &_head {
+        width: 50%;
+        margin-right: 5%;
+        @include respond(tab-land) {
+            width: 90%;
+            margin-right: 0%;
+            margin-bottom: 6rem;
+        }
+
+        img {
+            clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+            margin: 4rem 0 0 -27%;
+            width: 117%;
+            max-height: 230px;
+            object-fit: cover;
+        }
+    }
+
+    &_news {
+        flex: 1;
+        @include respond(tab-land) {
+            width: 90%;
+        }
+        &--single {
+           padding-bottom: 2rem;
+           border-bottom: 1px solid #DDDDDD;
+          
+
+           &:not(:last-of-type) {
+               margin-bottom: 3rem;
+               @include respond(tab-land) {
+           
+                margin-bottom: 6rem;
+            }
+           }
+
+           .date {
+               color: #5B5B5B;
+               font-size: 15px;
+               font-weight: 400;
+               margin-bottom: 1rem;
+                display: block;
+           }
+
+           p {
+               color: black;
+               font-size: 21px;
+               font-weight: 500;
+           }
+
+           .btn {
+               font-size: 15px;
+               font-weight: 500;
+               margin-top: 1.5rem;
+           }
+
+        }
+        
+    }
+
+    
+}
+
+
+// contact Us sec 
+
+.contactUs {
+    width: 100%;
+    height: 400px;
+    background-image: url("../img/home/contactUs.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &:before, &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: rgba(255, 255, 225, 0.1);
+    }
+
+    &:before {
+        clip-path: polygon(0 0, 53% 0, 85% 100%, 0% 100%);
+        width: 100%;  
+        z-index: 1;
+        @include respond(phone){
+            clip-path: polygon(0 0, 0% 0, 100% 100%, 0% 100%);
+        }
+    }
+
+    &:after {
+        clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+        width: 70%;
+        z-index: 2;
+        @include respond(phone){
+            clip-path: polygon(0 0, 0% 0, 75% 100%, 0% 100%);
+        }
+    }
+
+    &_text {
+        color: white;
+        text-align: center;
+        position: relative;
+        z-index: 33;
+        width: 100%;
+
+        &:hover {
+            span {
+                width: 35%;
+            }
+        }
+
+        p {
+            font-size: 19px;
+            font-weight: 400;
+            margin-bottom: 2rem;
+        }
+
+        .contactLink {
+            font-weight: 900;
+            font-size: 65px;
+            text-transform: uppercase;
+            margin-bottom: 4rem;
+            cursor: pointer;
+            display: block;
+            color: white;
+            @include respond(phone){
+                font-size: 40px;
+            }
+
+        }
+
+        span {
+            display: block;
+            width: 180px;
+            height: 1px;
+            background-color: #FFFFFF;
+            margin: 0 auto;
+            transition: all .3s ease-in ;
+        }
+    }
+}
+
+
+.news_listing.searchresult {
+    padding: 7rem 0;
+    .news_listing_single {
+        width: 51.5%; 
+        margin-bottom: 5rem;
+        @include respond(phone){
+            width: 90.5%;
+        }
+    }
+    .news_listing_single {
+        min-height: 185px;
+        height: unset;
+    }
+    .news_listing_single_text {
+        & >span {
+            line-height: 1.6;
+            display: block;
+            margin-bottom: 2.5rem;
+        }
+        h2 {
+            margin-bottom: 2rem;
+            font-size: 21px;
+        }
+    } 
+}
+
+// error page
+.errorPage {
+    width: 100%;
+    min-height: 400px;
+    padding: 18rem 4rem 10rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .primary-text {
+        font-size: 65px;
+        font-weight: 800;
+        margin-bottom: 1rem;
+    }
+    .heading_black {
+        margin-bottom: 4rem;
+    }
+
+    .btn {
+        font-weight: 500;
+    }
+}
+
+
+ .followLinks  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+    margin: 4rem auto 0;
+    height: 80px;
+    @include respond(tab-land){
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    a {
+        min-width: 29rem;
+        max-width: 200px;
+        max-height: 50px;
+        justify-content: center;
+        padding: 1rem 2rem;
+        @include respond(tab-land){
+            margin-bottom: 2rem;
+            min-width: 29rem;
+    max-width: 40rem;
+    max-height: 50px;
+        }
+
+        i {
+            font-size: 14px;
+            margin-right: 1rem;
+
+        }
+
+    }
+ }

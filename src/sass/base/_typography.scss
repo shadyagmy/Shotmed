@@ -1,0 +1,222 @@
+*:not(i),*:not(i)::after,*:not(i)::before{
+    font-family: 'Montserrat', sans-serif;
+}
+  
+  
+
+
+
+p {
+    font-weight: normal;
+    &.para {
+        font-size: 15px;
+        color: #58595B;
+        line-height: 1.6;;
+        font-weight: 500;
+
+    }
+}
+
+h1,h2,h3,h4,h5,div,p,ul,li,a,input{
+    margin:0;
+    padding: 0;
+    text-decoration: none!important;
+    
+}
+
+a:link,a:hover,a:focus,a:active{
+    text-decoration: none;
+}
+
+
+li{
+    list-style: none;
+}
+.capitalize{
+    text-transform: capitalize;
+}
+
+img.arrow {
+    margin-right: .5rem;
+    width: 14px!important;
+    height: 9px!important;
+}
+//PRIMARY HEADING
+.primary-text{
+    color:$mainColor;
+    text-transform: uppercase;
+    margin-bottom: 2rem;   
+    &--main{
+        display: block!important;
+        font-size: 6rem;
+        margin-bottom: 1.5rem;
+        letter-spacing: 3.4rem;
+        font-weight: normal;
+        animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        @include respond(tab-land){
+            font-size: 5rem; 
+        }
+        @include respond(phone){
+            font-size: 4rem;
+            letter-spacing: 1.4rem;
+        }
+    }
+    &--sub{
+        display: block;
+        font-size: 2rem;
+        letter-spacing: 1.5rem;
+        font-weight: 700;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        @include respond(phone){
+            font-size: 1.8rem;
+            letter-spacing: 1rem;
+        }
+    }
+}
+
+
+//SECONDARY HEADING
+.heading_black {
+    &>h1,&>h2,&>h3,&>h4,&>h5,&>h6,& {
+        font-size: 38px;
+        text-transform: uppercase;
+        font-weight: 900;
+        margin-bottom: 2rem;
+        display: inline-block;
+        color: black;
+        transition: all .2s ease;    
+        line-height: .9;
+    }
+    
+}
+
+.heading_w {
+     &>h1,&>h2,&>h3,&>h4,&>h5,&>h6,&{
+        font-size: 41px;
+        text-transform: uppercase;
+        font-weight: 900;
+        margin-bottom: 2rem;
+        display: inline-block;
+        color: white;
+        transition: all .2s ease;
+    }
+    
+   
+}
+.heading20_b {
+     &>h1,&>h2,&>h3,&>h4,&>h5,&>h6,& {
+        font-size: 20px;
+        text-transform: capitalize;
+        font-weight: 900;
+        margin-bottom: 2rem;
+       
+        color: black;
+        transition: all .2s ease;
+    }
+   
+}
+
+.heading20_w {
+     &>h1,&>h2,&>h3,&>h4,&>h5,&>h6,& {
+        font-size: 20px;
+        text-transform: capitalize;
+        font-weight: 900;
+        margin-bottom: 2rem;
+        display: inline-block;
+        color: white;
+        transition: all .2s ease;
+    }
+   
+    
+}
+
+
+
+.main_p {
+    &>p,&>ul,&>li,& {
+        color: #5B5B5B;
+        font-size: 15px;
+        line-height: 1.6;
+        font-weight: 500;
+        &:not(:last-of-type) {
+            margin-bottom: 2rem;
+        }
+    }
+    
+}
+
+.main_p15 {
+    &>p,&>ul,&>li,& {
+        color: #5B5B5B;
+        font-size: 15px;
+        line-height: 1.6;
+        font-weight: 500;
+    }
+   
+}
+
+.main_p15_w {
+    &>p,&>ul,&>li,& {
+        color: white;
+        font-size: 15px;
+        line-height: 1.6;
+        font-weight: 400;
+    }
+  
+}
+
+.main_p17 {
+    &>p,&>ul,&>li,& {
+        color: #5B5B5B;
+        font-size: 17px;
+        line-height: 1.6;
+        font-weight: 500;
+        @include respond(phone) {
+            font-size: 15px;
+        }
+  
+    }
+    a {
+        text-transform: capitalize;
+        color: #305990;
+        font-weight: 400;
+    }
+   
+}
+
+.main_p_w {
+    &>p,&>ul,&>li,& {
+        color: #FFFFFF;
+        font-size: 15px;
+        line-height: 1.6;
+        font-weight: 400; 
+        &:not(:last-of-type) {
+            margin-bottom: 2rem;
+        }
+    }
+  
+}
+
+.main_p_w17 {
+    &>p,&>ul,&>li,& {
+        color: #FFFFFF;
+        font-size: 17px;
+        line-height: 1.6;
+        font-weight: 400;  
+    }
+   
+}
+
+.link_inline {
+    a,&>p,&>ul,&>li,& {
+        text-transform: capitalize;
+        color: $mainColor;
+        font-weight: 400;
+    }
+   
+}
+

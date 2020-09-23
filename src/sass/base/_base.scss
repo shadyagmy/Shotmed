@@ -1,0 +1,51 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+html{
+    overflow-x: hidden;
+    font-size:62.5%;
+    @include respond(tab-land){
+        font-size: 56.25%;
+    }
+    @include respond(tab-port){
+        font-size: 50%;
+    }
+    @include respond(big-desktop){
+        font-size: 75%;
+    }
+}
+body{
+    position: relative;
+    overflow-x: hidden;
+    margin: 0 0 ;
+   
+    @include respond(tab-port){
+        padding: 0px;
+        margin: 0px;
+    }
+}
+// html { height:100%; overflow:hidden; }
+// body { height:100%; overflow:hidden; }
+
+#outerWrapper {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+   
+}
+
+.clearfix{
+    clear: both;
+}
+
+.overflowHidden {
+    overflow: hidden;
+}
+
+
+button,a {
+    cursor: pointer;
+}

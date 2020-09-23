@@ -1,0 +1,133 @@
+.popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.7);
+    z-index: 999999999;
+    display: none;
+   .popup__container {
+        width: 30%;
+        min-width: 400px;
+        float: right;
+        height: 100%;
+       background-image: linear-gradient(to right, #305990,#3A6EB6);
+       background-size: cover;
+       clip-path: polygon(11% 0%, 100% 0, 100% 100%, 32% 100%);
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       padding: 4rem 4rem 3rem 8rem;
+       overflow-y: scroll;
+       -webkit-overflow-scrolling: touch;
+       @include respond(tab-land) {
+        padding: 4rem 4rem 6rem 12rem;
+        width: 70%;
+       }
+       @include respond(phone) {
+        width: 100%;
+        padding: 3rem 4rem 6rem 8rem;
+        clip-path: polygon(1% 0%, 100% 0, 100% 100%, 20% 100%);
+       }
+   }
+
+   .closeMenu {
+       img {
+        width: 28px;
+        opacity: .8;
+        @include respond(phone) {
+            width: 18px;
+        }
+       }
+   }
+
+   .popup__menu-cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+       li {
+            margin-bottom: 3rem;
+           display: none;
+            &:nth-of-type(1),
+            &:nth-of-type(2),
+            &:nth-of-type(3),
+            &:nth-of-type(4),
+            &:nth-of-type(5) {
+                display: block;
+            }
+            @include respond(tab-land)  {
+                display: block;     
+            }
+
+            &.current_page_item {
+                .tri {
+                    visibility: visible;
+                    opacity: 1;
+               } 
+            }
+            
+            a {
+                color: white;
+                font-weight: bold;
+                font-size: 15px;
+                text-transform: uppercase;
+
+                .tri {
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all .3s ease;
+                    margin: 0 1rem 0;
+                    margin-left: -.3rem;
+                    width: 1.1rem;
+                    
+                }
+
+            &:hover, &:Active {
+                .tri {
+                    visibility: visible;
+                    opacity: 1;
+               } 
+            }
+            
+            
+ 
+        }
+       }
+
+       .closeMenu {
+        align-self: flex-end;
+        display: block;
+        margin-bottom: 5rem;
+        @include respond(tab-land) {
+            margin-bottom: 1rem;
+        }
+       }
+   }
+
+   .followUs {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+    margin-left: 6rem;
+   
+    h6 {
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 1rem;
+        @include respond(tab-land) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    a {
+        @include respond(tab-land) {
+            margin-right: 5rem;
+        }
+    }
+   }
+   
+}

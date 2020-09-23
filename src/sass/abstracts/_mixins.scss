@@ -1,0 +1,63 @@
+@mixin clearFix {
+    &::after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin  centerPositioning {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin posAbsR {
+    position: absolute;
+    top: 0;
+    right: 0; 
+}
+
+@mixin posAbsL {
+    position: absolute;
+    top: 0;
+    left: 0; 
+}
+
+@mixin  displayFlex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin  flexC {
+    display: flex;
+    flex-direction: column;
+  }
+
+@mixin  tabboxshadow {
+    box-shadow: 0 3px 16px #00000029;
+    transition: box-shadow .1s ease-in;
+  }
+
+
+//MEDIA QUERIES MANAGER
+
+@mixin  respond($breakpoint) {
+
+    @if $breakpoint == tab-land{
+        @media(max-width: 75em){@content};
+    }
+
+    @if $breakpoint == tab-port{
+        @media(max-width: 56.25em){@content};
+    }
+
+    @if $breakpoint == phone{
+        @media(max-width: 37.5em){@content};
+    }
+
+    @if $breakpoint == big-screen{
+        @media(min-width: 112.5em){@content};
+    }
+}

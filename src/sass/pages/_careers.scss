@@ -1,0 +1,558 @@
+.careers_cont {
+    width: 70%;
+    margin: -3rem auto;
+    @include respond(tab-land){
+        width: 97%;
+     }
+}
+
+
+.careers_loc {
+   
+    border-bottom: 1px solid #D8D8D8 ;
+
+    &:nth-of-type(1) {
+        border-top: 1px solid #D8D8D8 ;
+    }
+   
+}
+
+.careers_loc_content {
+    &_head {
+        display: flex;
+        
+        width: 100%;
+        min-height: 115px;
+        &-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 40px;
+           
+            img {
+                width: 17px;
+                transition: all .3s ease;
+
+                &.open {
+                    transform: rotate(-90deg);
+                }
+            }   
+        }
+
+        &-title {
+            width: calc(100% - 40px);
+            
+            display: flex;
+            justify-content: center;
+            padding-left: 1rem;
+            flex-direction: column;
+            h3 {
+                font-size: 20px;
+                color: #305990;
+                font-weight: 800;
+                text-transform: capitalize;
+               
+            }
+
+           
+
+            &-info {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1.2rem;
+
+                & > p {
+                    color: #58595B;
+                    font-size: 15px;
+                }
+                
+
+                &-v {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    margin-bottom: 1.5rem;
+
+                    
+                }
+            }
+
+            .info-title {
+                color: #5B5B5B;
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    &_body {
+        display: none;
+        min-height: unset;
+        .full_cont {
+            margin: 0.5rem 4% 0rem 0;
+        }
+    }
+}
+
+.apply_now_btn {
+    .btn {
+        padding: 1.5rem 0rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+}
+
+.application_form {
+    display: flex;
+    @include respond(tab-land){
+        flex-direction: column;
+    }
+   
+
+    &_form, .wpcf7-form {
+        margin-top: 0rem;
+        padding: 2rem 0rem 5rem 0rem;
+        flex-grow: 1;
+        @include respond(tab-land){
+            justify-self: center;
+            margin: 0 auto;
+            margin-top: 0;
+            padding: 14rem 2rem 4rem 2rem;
+            width: 100%;
+        }
+        @include respond(phone){
+            width: 100%;
+            padding: 5rem 2rem 6rem 2rem;
+           
+        }
+
+        h2 {
+            font-size: 41px;
+            color: #000000;
+            text-transform: uppercase;
+            font-weight: 900;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 3rem;
+            margin-top: 4rem;
+
+            @include respond(phone){
+                font-size: 33px;
+               
+            }
+
+            & + div {
+                width: 70%;
+                margin: 0rem auto;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 400;
+                @include respond(phone){
+                   width: 95%;
+                    
+                 }
+              }
+        }
+
+      
+    }
+
+}
+
+.input_files_cont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    @include respond(tab-land) {
+       width: 100%;
+     }
+}
+
+.input_file_cont {
+    margin-bottom: 2rem;
+}
+
+.input-file-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    flex-wrap: wrap;
+
+    span:not(.wpcf7-not-valid-tip) {
+        font-size: 10px;
+        color: black;
+        font-weight: 100;
+        display: block;
+        font-style: italic;
+        margin-left: 1rem;
+
+        
+    }
+
+    .wpcf7-not-valid-tip {
+        position: absolute;
+        width: 100%;
+        min-width: 19rem;
+        top: 1rem;
+        left: 0;
+        margin-left: -10px!important;
+    }
+    span:not(.wpcf7-form-control-wrap) {
+        margin-left: 19rem; 
+    }
+  } 
+  .js .input-file-trigger {
+    display: block;
+    font-size: 15px;
+    color: #305990;
+    font-weight: 400;
+    transition: all .4s;
+    cursor: pointer;
+    margin-left: -1rem;
+  }
+  .js .input-file {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+    color : black;
+    width: 85px;
+    
+    opacity: 0;
+    padding: 14px 0;
+    cursor: pointer;
+  }
+
+  
+  .file-return {
+    margin: 0;
+  }
+  .file-return:not(:empty) {
+    margin: 1em 0;
+  }
+  .js .file-return {
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    margin: 1.3rem 0;
+  }
+  .js .file-return:not(:empty):before {
+    content: "Selected file: ";
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  .application_form_form,.wpcf7-form {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      
+  }
+
+  .submit_form {
+    @include respond(phone){
+       margin-top: 4rem;
+       
+    }
+
+    .btn {
+        padding: 2rem 0;
+      
+    
+        input {
+            color: #305990;
+            background-color: unset;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            
+     }
+    }
+    
+
+
+
+   
+  }
+
+  input[type="text"], input[type="password"], textarea, select { 
+    outline: none;
+}
+  .main_btn_white.submitForm {
+        position: relative;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        color: #0B63AC;
+        justify-content: center;
+        width: 370px;
+        height: 80px;
+        margin-top: 0;
+        margin-left: 0;
+        font-size: 13px;
+        font-weight: 800;
+        @include respond(phone) {
+            width: 100%; 
+         }
+
+        img {
+            margin-left: 5rem;
+            width: 7px;
+        }
+      
+      input {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          color: transparent;
+          -moz-appearance: none;
+            /* for Chrome */
+            -webkit-appearance: none;  
+            /* For IE10 */
+            &::-ms-expand {
+                display: none;
+            }
+          
+      }
+
+      img + span {
+        left: 30%;
+      }
+  }
+
+
+  .careers_loc_content > .careers_loc_content_head:first-of-type {
+      cursor: pointer;
+  }
+
+
+  .custom_input_group {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    width: 48%;
+    @include respond(phone){
+        margin-top: 0rem;
+        
+     }
+    @include respond(phone){
+        width: 100%; 
+       
+    }
+
+    .custom_input {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4rem;
+        @include respond(phone) {
+            width: 100%;
+         }
+
+        &.alignStart {
+            margin-top: -10rem;
+        }
+
+        // &:nth-of-type(odd),&.customMR {
+        //     margin-right: 3%;
+        // }
+       
+        input,select,textarea {
+           font-size: 13px;
+            border: none;
+            height: auto;
+            padding: 2rem 0rem;
+            color: rgba(0,0,0,1);
+            outline: none;
+            width: 100%;
+            border-bottom: 1px solid #D8D8D8;
+            appearance: none;
+             /* for Firefox */
+             -moz-appearance: none;
+             /* for Chrome */
+             -webkit-appearance: none;  
+             /* For IE10 */
+             -ms-appearance: none;
+             &::-ms-expand {
+                 display: none;
+             }
+            outline: 0;
+            background: white;
+            box-shadow: none;
+
+            &::placeholder {
+                color: rgba(0,0,0,.4); 
+                font-size: 13px;
+            }
+           
+        }
+
+        textarea {
+            height: 151px;
+            resize: none;
+        }
+
+        select,select[multiple] {
+            color: rgba(0,0,0,.4);
+            font-size: 13px;
+            // appearance: button;
+            outline: none;
+            position: relative;
+           
+           
+            option,option:not(:checked),option:checked,option:hover,option:focus {
+                padding: 0!important;
+                color: rgba(0,0,0,.4);
+                font-size: 13px;
+                background-color: transparent;
+                outline: none;
+                border: none!important;
+            }
+                    
+        }
+        .custom_selectbox {
+            position: relative;
+            
+            &:before {
+                content: "";
+                position: absolute;
+                top: 1.5rem;
+                right: 25px;
+                width: 14px;
+                height: 22px;
+                text-align: center;
+                font-size: 28px;
+                line-height: 45px;
+                background-image: url("../img/icons/right-b.png");
+                pointer-events: none;
+                z-index: 99;
+                background-repeat: no-repeat;
+                transform: rotate(90deg);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+.solutionsTabs.Locations.car {
+    display: flex;
+   
+    // @include respond(tab-land) {
+    //     margin-top: 9rem;
+    //     padding: 6rem 4.5rem 8rem 0;
+    //  }
+
+     @media(max-width: 80em) {
+        margin-top: 9rem;
+        padding: 6rem 4.5rem 8rem 0;
+     }
+    a {
+        padding:  2.5rem;
+        @include respond(tab-land) {
+            padding: 2.5rem 1.5rem;
+         }
+    }
+}
+
+
+
+select[multiple] {
+    overflow-y: auto;
+    height: 15rem!important;
+    @include respond(phone) {
+        height: 44px!important;
+     }
+    option:checked,option:active {
+        background: #4E9CDD linear-gradient(0deg, #4E9CDD 0%, #4E9CDD 100%);
+        color: white!important;
+        &:nth-of-type(1) {
+            padding-top: 5px!important;
+        }
+    }
+            
+}
+
+
+
+
+
+
+.solutionsTabs.Locations.car {
+    a {
+        max-width: 18rem;
+        @media (max-width: 75em) {
+            max-width: unset;
+        }
+    }
+
+    
+}
+
+.wpcf7-response-output {
+    background: #D65F5F;
+    border: 0!important;
+    padding: .5rem 2rem!important;
+    color: white!important;
+    font-size: 1.2rem!important;
+    border-radius: 1rem!important;
+    margin-bottom: 3rem!important;
+    float: left;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+background-color: #46b450;
+}
+
+.custom_input_group  {
+    input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #065495 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+}
+
+.custom_input.loc {
+    display: none;
+}
+
+
+[dir="rtl"] {
+    .w_w_w_us_text .career_over .w_w_w_us_text-cont {
+        @media (max-width: 600px) {
+            right: 42%;   
+        }
+    }
+}
+
+.input_files_cont_parent {
+    display: flex;
+    flex-direction: column;
+    margin-top: -3.6rem;
+
+    h3 {
+        font-size: 13px;
+        margin-bottom: 1rem;
+    }
+}
