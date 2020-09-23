@@ -142,17 +142,17 @@
                
             }
 
-            & + div {
-                width: 70%;
-                margin: 0rem auto;
-                text-align: center;
-                font-size: 14px;
-                font-weight: 400;
-                @include respond(phone){
-                   width: 95%;
+            // & + div {
+            //     width: 70%;
+            //     margin: 0rem auto;
+            //     text-align: center;
+            //     font-size: 14px;
+            //     font-weight: 400;
+            //     @include respond(phone){
+            //        width: 95%;
                     
-                 }
-              }
+            //      }
+            //   }
         }
 
       

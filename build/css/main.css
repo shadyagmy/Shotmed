@@ -5110,15 +5110,6 @@ header {
       @media (max-width: 37.5em) {
         .application_form_form h2, .application_form .wpcf7-form h2 {
           font-size: 33px; } }
-      .application_form_form h2 + div, .application_form .wpcf7-form h2 + div {
-        width: 70%;
-        margin: 0rem auto;
-        text-align: center;
-        font-size: 14px;
-        font-weight: 400; }
-        @media (max-width: 37.5em) {
-          .application_form_form h2 + div, .application_form .wpcf7-form h2 + div {
-            width: 95%; } }
 
 .input_files_cont {
   width: 100%;
